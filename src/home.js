@@ -12,6 +12,7 @@ export function renderHome() {
 
   h1.textContent = 'Odin Burger';
   h4.textContent = '- Est. 2025 -';
+  p.setAttribute('class', 'welcome-p');
   p.textContent = 'Welcome to the best burger restaurant in the world!';
   imgContainer.setAttribute('class', 'img-container');
   img.setAttribute('src', restaurantImg);

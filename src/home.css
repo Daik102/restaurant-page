@@ -17,6 +17,7 @@
   --brown-theme: #511600;
   --brown-theme-shadow: rgba(81, 22, 0, 0.4);
   --brown-theme-light-shadow: rgba(81, 22, 0, 0.25);
+  --gold-theme: goldenrod;
 }
 
 body {
@@ -43,7 +44,7 @@ nav {
   gap: 2rem;
 }
 
-button {
+.btn {
   border: none;
   padding: 0.8rem 2rem;
   font-size: 2rem;
@@ -55,16 +56,26 @@ button {
   cursor: pointer;
 }
 
-h1 {
-  text-align: center;
+.btn:hover {
   color: var(--orangered-theme);
-  font-size: 6rem;
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  color: var(--orangered-theme);
+  font-size: 6.4rem;
   font-weight: 700;
   text-shadow: 0.2rem 0.2rem 0.4rem var(--background-theme), 0.8rem 0.8rem 0.8rem var(--brown-theme-shadow);
 }
 
 h4 {
-  text-align: center;
+  margin: 0.4rem 0 2.4rem;
   color: var(--orangered-theme);
   font-size: 1.6rem;
   font-style: italic;
@@ -73,10 +84,12 @@ h4 {
 }
 
 p {
-  margin-bottom: 2rem;
-  text-align: center;
   color: var(--brown-theme);
   font-size: 2.8rem;
+}
+
+.welcome-p {
+  margin-bottom: 2rem;
 }
 
 .img-container {
@@ -87,7 +100,7 @@ p {
 }
 
 .img-container img {
-  max-width: 80rem;
+  max-width: 72rem;
   box-shadow: 1.2rem 1.2rem 1.2rem 0 var(--brown-theme-shadow);
 }
 
