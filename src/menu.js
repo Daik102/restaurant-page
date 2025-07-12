@@ -13,6 +13,8 @@ export function renderMenu() {
   const h3Shakes = document.createElement('h3');
   const ulShakes = document.createElement('ul');
 
+  ulBurgers.setAttribute('class', 'menu-items');
+  ulShakes.setAttribute('class', 'menu-items');
   h2.textContent = 'Our Menu';
   h3Burgers.textContent = 'Burgers';
   h3Shakes.textContent = 'Shakes';
@@ -41,7 +43,7 @@ export function renderMenu() {
   
   burgers.forEach((burger) => {
     burgersHTML += `
-      <li>
+      <li class="menu-item">
         <img src="${burger.src}" alt="${burger.alt}" class="${burger.class}">
         <p class="menu-name">${burger.name}</p>
         <p class="price">$${burger.price}</p>
@@ -74,7 +76,7 @@ export function renderMenu() {
   
   shakes.forEach((shake) => {
     shakesHTML += `
-      <li>
+      <li class="menu-item">
         <img src="${shake.src}" alt="${shake.alt}">
         <p class="menu-name">${shake.name}</p>
         <p class="price">$${shake.price}</p>
