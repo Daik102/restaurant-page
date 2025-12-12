@@ -60,7 +60,8 @@ nav {
   cursor: pointer;
 }
 
-.btn:hover {
+.btn:hover,
+.link-for-photo:hover {
   color: var(--orangered-theme);
 }
 

@@ -19,6 +19,7 @@ export function renderHome() {
   imgContainer.appendChild(img);
   linkContainer.setAttribute('class', 'link-container');
   a.setAttribute('href', 'https://unsplash.com/photos/two-square-brown-wooden-dining-tables-near-brown-brick-wall-OkhcMbf3vQ0');
+  a.setAttribute('class', 'link-for-photo');
   a.setAttribute('target', '_blank');
   a.textContent = 'Photo by Katlyn Giberson on Unsplash';
   linkContainer.appendChild(a);
