@@ -1,15 +1,19 @@
-h2 {
-  font-size: 4.8rem;
+.menu-title,
+.burgers-title,
+.shakes-title {
   font-weight: 700;
   color: var(--orangered-theme);
 }
 
-h3 {
-  position: relative;
-  margin: 2rem 0 2.4rem;
+.menu-title {
   font-size: 4rem;
-  font-weight: 700;
-  color: var(--orangered-theme);
+  
+}
+
+.burgers-title,
+.shakes-title {
+  margin: 2rem 0 2.4rem;
+  font-size: 3.6rem;
 }
 
 .menu-items {
@@ -30,7 +34,7 @@ h3 {
   aspect-ratio: 4 / 3;
   object-fit: cover;
   border-radius: 0.8rem;
-  box-shadow: 0 0 0 0.2rem var(--background-theme), 0 0 0 0.6rem var(--gold-theme);
+  box-shadow: 0 0 0 0.2rem var(--background-theme), 0 0 0 0.6rem var(--gold-theme), 1.2rem 1.2rem 1.2rem var(--brown-theme-shadow);
 }
 
 .position-left {
@@ -39,9 +43,17 @@ h3 {
 
 .menu-name {
   margin: 2rem 0 0.8rem;
+  font-size: 2.8rem;
   border-bottom: 0.2rem solid var(--gold-theme);
 }
 
 .price {
-  font-size: 2rem;
+  font-size: 2.2rem;
+}
+
+@media screen and (orientation: portrait) and (max-width: 47.99rem) {
+  .menu-items {
+    grid-template-columns: 1fr;
+    gap: 2.4rem;
+  }
 }

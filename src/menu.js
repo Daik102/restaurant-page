@@ -7,17 +7,18 @@ import mangoImg from './images/foods/Mango-Shake-Thumbnail.jpg';
 
 export function renderMenu() {
   const content = document.getElementById('content');
-  const h2 = document.createElement('h2');
-  const h3Burgers = document.createElement('h3');
-  const ulBurgers = document.createElement('ul');
-  const h3Shakes = document.createElement('h3');
-  const ulShakes = document.createElement('ul');
+  content.innerHTML = '';
 
-  ulBurgers.setAttribute('class', 'menu-items');
-  ulShakes.setAttribute('class', 'menu-items');
-  h2.textContent = 'Our Menu';
-  h3Burgers.textContent = 'Burgers';
-  h3Shakes.textContent = 'Shakes';
+  const menuTitle = document.createElement('h2');
+  menuTitle.setAttribute('class', 'menu-title');
+  menuTitle.textContent = 'Our Menu';
+
+  const burgersTitle = document.createElement('h3');
+  burgersTitle.setAttribute('class', 'burgers-title');
+  burgersTitle.textContent = 'Burgers';
+
+  const burgersList = document.createElement('ul');
+  burgersList.setAttribute('class', 'menu-items');
 
   const burgers = [
     {
@@ -40,8 +41,8 @@ export function renderMenu() {
   ];
 
   let burgersHTML = '';
-  
-  burgers.forEach((burger) => {
+
+  for (const burger of burgers) {
     burgersHTML += `
       <li class="menu-item">
         <img src="${burger.src}" alt="${burger.alt}" class="${burger.class}">
@@ -49,9 +50,16 @@ export function renderMenu() {
         <p class="price">$${burger.price}</p>
       </li>
     `;
-  });
+  }
 
-  ulBurgers.innerHTML = burgersHTML;
+  burgersList.innerHTML = burgersHTML;
+
+  const shakesTitle = document.createElement('h3');
+  shakesTitle.setAttribute('class', 'shakes-title');
+  shakesTitle.textContent = 'Shakes';
+
+  const shakesList = document.createElement('ul');
+  shakesList.setAttribute('class', 'menu-items');
 
   const shakes = [
     {
@@ -73,8 +81,8 @@ export function renderMenu() {
   ];
 
   let shakesHTML = '';
-  
-  shakes.forEach((shake) => {
+
+  for (const shake of shakes) {
     shakesHTML += `
       <li class="menu-item">
         <img src="${shake.src}" alt="${shake.alt}">
@@ -82,13 +90,13 @@ export function renderMenu() {
         <p class="price">$${shake.price}</p>
       </li>
     `;
-  });
+  }
 
-  ulShakes.innerHTML = shakesHTML;
+  shakesList.innerHTML = shakesHTML;
 
-  content.appendChild(h2);
-  content.appendChild(h3Burgers);
-  content.appendChild(ulBurgers);
-  content.appendChild(h3Shakes);
-  content.appendChild(ulShakes);
+  content.appendChild(menuTitle);
+  content.appendChild(burgersTitle);
+  content.appendChild(burgersList);
+  content.appendChild(shakesTitle);
+  content.appendChild(shakesList);
 }

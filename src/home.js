@@ -1,31 +1,31 @@
-import restaurantImg from './images/katlyn-giberson-OkhcMbf3vQ0-unsplash.jpg';
-
 export function renderHome() {
   const content = document.getElementById('content');
-  const h1 = document.createElement('h1');
-  const h4 = document.createElement('h4');
-  const p = document.createElement('p');
-  const imgContainer = document.createElement('div');
-  const img = document.createElement('img');
-  const linkContainer = document.createElement('div');
-  const a = document.createElement('a');
+  content.innerHTML = '';
 
-  h1.textContent = 'Odin Burger';
-  h4.textContent = '- Est. 2025 -';
-  p.setAttribute('class', 'welcome-p');
-  p.textContent = 'Welcome to the best burger restaurant in the world!';
+  const title = document.createElement('h1');
+  title.setAttribute('class', 'title');
+  title.textContent = 'Odin Burger';
+
+  const establishedYear = document.createElement('p');
+  establishedYear.setAttribute('class', 'establishedYear');
+  establishedYear.textContent = '- Est. 2025 -';
+
+  const message = document.createElement('p');
+  message.setAttribute('class', 'message');
+  message.textContent = 'Welcome to the best burger restaurant in the world!';
+
+  const imgContainer = document.createElement('div');
   imgContainer.setAttribute('class', 'img-container');
-  img.setAttribute('src', restaurantImg);
-  imgContainer.appendChild(img);
-  linkContainer.setAttribute('class', 'link-container');
-  a.setAttribute('href', 'https://unsplash.com/photos/two-square-brown-wooden-dining-tables-near-brown-brick-wall-OkhcMbf3vQ0');
-  a.setAttribute('class', 'link-for-photo');
-  a.setAttribute('target', '_blank');
-  a.textContent = 'Photo by Katlyn Giberson on Unsplash';
-  linkContainer.appendChild(a);
-  content.appendChild(h1);
-  content.appendChild(h4);
-  content.appendChild(p);
+
+  const link = document.createElement('a');
+  link.setAttribute('class', 'link-for-photo');
+  link.setAttribute('target', '_blank');
+  link.setAttribute('href', 'https://unsplash.com/photos/two-square-brown-wooden-dining-tables-near-brown-brick-wall-OkhcMbf3vQ0');
+  link.textContent = 'Photo by Katlyn Giberson on Unsplash';
+  
+  content.appendChild(title);
+  content.appendChild(establishedYear);
+  content.appendChild(message);
   content.appendChild(imgContainer);
-  content.appendChild(linkContainer);
+  content.appendChild(link);
 }

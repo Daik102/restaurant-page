@@ -1,20 +1,17 @@
 import './home.css';
 import './menu.css';
 import './contact.css';
-import { renderHome } from './home.js';
-import { renderMenu } from './menu.js';
-import { renderContact } from './contact.js';
+import { renderHome } from './home';
+import { renderMenu } from './menu';
+import { renderContact } from './contact';
+
+renderHome();
 
 (function switchPage() {
-  renderHome();
-  
   const btns = document.querySelectorAll('.btn');
-  const content = document.getElementById('content');
 
   btns.forEach((btn) => {
     btn.addEventListener('click', (e) => {
-      content.innerHTML = '';
-
       if (e.target.classList.contains('home')) {
         renderHome();
       } else if (e.target.classList.contains('menu')) {

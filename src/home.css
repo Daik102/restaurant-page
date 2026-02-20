@@ -7,7 +7,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-size: 10px;
   font-family: Lobster, Arial, Helvetica, sans-serif;
 }
 
@@ -20,28 +19,43 @@
   --gold-theme: #f8bd26;
 }
 
+html {
+  font-size: 10px;
+}
+
+body {
+  background-color: var(--background-theme);
+}
+
 li {
   list-style: none;
 }
 
-body {
-  height: 100vh;
+a {
+  text-decoration: none;
+  font-size: 1.6rem;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--background-theme);
+  height: 100vh;
 }
 
-header {
+.header {
   width: 100%;
-  margin-bottom: 4.4rem;
   padding: 0.4rem 0;
   background-color: var(--orangered-theme);
   box-shadow: 0 0.2rem var(--background-theme), 0 0.6rem var(--orangered-theme);
 }
 
-nav {
+.nav {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -49,19 +63,18 @@ nav {
 }
 
 .btn {
-  border: none;
   margin: 0.4rem 0;
   padding: 1rem 2rem;
   font-size: 2rem;
   color: var(--brown-theme);
   background-color: var(--background-theme);
   box-shadow: inset 0 -0.6rem 0.6rem 0 var(--brown-theme-light-shadow);
-  border-radius: 50%;
+  border: none;
+  border-radius: 47.5%;
   cursor: pointer;
 }
 
-.btn:hover,
-.link-for-photo:hover {
+.btn:hover {
   color: var(--orangered-theme);
 }
 
@@ -70,17 +83,19 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 2.8rem 0;
+  color: var(--brown-theme);
 }
 
-h1 {
+.title {
   font-size: 6.4rem;
   font-weight: 700;
-  text-shadow: 0.2rem 0.2rem 0.4rem var(--background-theme), 0.8rem 0.8rem 0.8rem var(--brown-theme-shadow);
   color: var(--orangered-theme);
+  text-shadow: 0.2rem 0.2rem 0.4rem var(--background-theme), 0.8rem 0.8rem 0.8rem var(--brown-theme-shadow);
 }
 
-h4 {
-  margin: 0.4rem 0 2.4rem;
+.establishedYear {
+  margin: 0.4rem 0 4rem;
   font-size: 1.6rem;
   font-style: italic;
   font-weight: 700;
@@ -88,52 +103,123 @@ h4 {
   color: var(--orangered-theme);
 }
 
-p {
-  font-size: 2.8rem;
-  color: var(--brown-theme);
-}
-
-.welcome-p {
-  margin-bottom: 2rem;
+.message {
+  font-size: 3rem;
+  text-align: center;
 }
 
 .img-container {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  margin-bottom: 2rem;
+  margin: 2rem 0;
+  width: 64rem;
+  aspect-ratio: 4 / 3;
+  background: url(./images/katlyn-giberson-small.jpg) no-repeat;
+  background-size: contain;
+  box-shadow: 1.2rem 1.2rem 1.2rem var(--brown-theme-shadow);
 }
 
-.img-container img {
-  max-width: 64rem;
-  box-shadow: 1.2rem 1.2rem 1.2rem 0 var(--brown-theme-shadow);
-}
-
-.link-container {
-  display: flex;
-  justify-content: center;
-}
-
-a {
-  text-decoration: none;
-  font-size: 1.6rem;
+.link-for-photo {
+  padding: 0.2rem;
   color: var(--brown-theme);
 }
 
-a:hover {
-  text-decoration: underline;
+.link-for-photo:hover {
+  color: var(--orangered-theme);
 }
 
-footer {
+.footer {
+  align-self: flex-end;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin-top: 2rem;
-  padding: 1.2rem 0;
+  padding: 2rem 0;
   background-color: var(--orangered-theme);
 }
 
 .admin-link {
+  padding: 0.2rem;
   color: var(--background-theme);
+}
+
+@media screen and (orientation: portrait) and (max-width: 30rem) {
+  .message,
+  .img-container {
+    width: 40rem;
+  }
+
+  .footer {
+    padding: 2rem 0 6rem;
+  }
+}
+
+@media screen and (orientation: portrait) and (max-width: 20rem) {
+  html {
+    font-size: 6px;
+  }
+}
+
+@media screen and (orientation: portrait) and (min-width: 20.01rem) and (max-width: 47.99rem) {
+  html {
+    font-size: 7px;
+  }
+}
+
+@media screen and (orientation: portrait) and (min-width: 24.01rem) and (max-width: 47.99rem) and (min-height: calc(50rem - 100px)) {
+  html {
+    font-size: 8px;
+  }
+}
+
+@media screen and (orientation: portrait) and (min-width: 24.01rem) and (max-width: 47.99rem) and (min-height: calc(54rem - 100px)) {
+  html {
+    font-size: 8.5px;
+  }
+}
+
+@media screen and (orientation: portrait) and (min-width: 48rem) {
+  html {
+    font-size: 8.5px;
+  }
+}
+
+@media screen and (orientation: portrait) and (min-width: 48rem) and (min-height: calc(70rem - 100px)) {
+  html {
+    font-size: 9px;
+  }
+}
+
+@media screen and (orientation: portrait) and (min-width: 56rem) {
+  html {
+    font-size: 10px;
+  }
+}
+
+@media screen and (orientation: portrait) and (min-width: 64rem) {
+  html {
+    font-size: 11px;
+  }
+}
+
+@media screen and (orientation: landscape) and (max-width: 41rem) {
+  html {
+    font-size: 6px;
+  }
+}
+
+@media screen and (orientation: landscape) and (min-width: 41.01rem) and (max-width: 47rem) {
+  html {
+    font-size: 7px;
+  }
+}
+
+@media screen and (orientation: landscape) and (min-width: 47.01rem) and (max-width: 53rem) {
+  html {
+    font-size: 8px;
+  }
+}
+
+@media screen and (orientation: landscape) and (min-width: 53.01rem) and (max-width: 59rem) {
+  html {
+    font-size: 8.5px;
+  }
 }
