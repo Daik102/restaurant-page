@@ -23,20 +23,17 @@ export function renderMenu() {
   const burgers = [
     {
       src: eggImg,
-      alt: 'egg-attack',
       name: 'Egg Attack',
-      price: '7.99'
+      price: '7.99',
     }, {
       src: baconImg,
-      alt: 'bacon-overflow',
       name: 'Bacon Overflow',
       price: '8.99',
-      class: 'position-left'
+      class: 'position-left',
     }, {
       src: dinerImg,
-      alt: 'diner-double',
       name: 'Diner Double',
-      price: '9.99'
+      price: '9.99',
     }, 
   ];
 
@@ -45,7 +42,7 @@ export function renderMenu() {
   for (const burger of burgers) {
     burgersHTML += `
       <li class="menu-item">
-        <img src="${burger.src}" alt="${burger.alt}" class="${burger.class}">
+        <img src="${burger.src}" alt="" class="${burger.class}">
         <p class="menu-name">${burger.name}</p>
         <p class="price">$${burger.price}</p>
       </li>
@@ -64,19 +61,16 @@ export function renderMenu() {
   const shakes = [
     {
       src: oreoImg,
-      alt: 'oreo-milkshake',
       name: 'Oreo Dream',
-      price: '5.99'
+      price: '5.99',
     }, {
       src: strawberryImg,
-      alt: 'strawberry-milkshake',
       name: 'Strawberry Heaven',
-      price: '6.99'
+      price: '6.99',
     }, {
       src: mangoImg,
-      alt: 'mango-shake',
       name: 'Mango paradise',
-      price: '6.99'
+      price: '6.99',
     }, 
   ];
 
@@ -85,7 +79,7 @@ export function renderMenu() {
   for (const shake of shakes) {
     shakesHTML += `
       <li class="menu-item">
-        <img src="${shake.src}" alt="${shake.alt}">
+        <img src="${shake.src}" alt="">
         <p class="menu-name">${shake.name}</p>
         <p class="price">$${shake.price}</p>
       </li>

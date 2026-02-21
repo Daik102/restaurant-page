@@ -27,23 +27,23 @@ export function renderContact() {
       src: sally,
       alt: 'australian-shepherd',
       name: 'Sally',
-      position: 'Boss'
+      position: 'Boss',
     }, {
       src: moon,
       alt: 'gray-cat',
       name: 'Moon',
-      position: 'Cook'
+      position: 'Cook',
     }, {
       src: sierra,
       alt: 'white-dog',
       name: 'Sierra',
       position: 'Waitress',
-      class: 'position-top'
+      class: 'position-top',
     }, {
       src: bob,
       alt: 'hedgehog',
       name: 'Bob',
-      position: 'Trainee'
+      position: 'Trainee',
     }
   ];
 

@@ -48,7 +48,7 @@
 }
 
 .position-top {
-  object-position: top;
+  object-position: 50% 0%;
 }
 
 .email,
