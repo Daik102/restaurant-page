@@ -10,15 +10,15 @@ export function renderMenu() {
   content.innerHTML = '';
 
   const menuTitle = document.createElement('h2');
-  menuTitle.setAttribute('class', 'menu-title');
+  menuTitle.classList.add('menu-title');
   menuTitle.textContent = 'Our Menu';
 
   const burgersTitle = document.createElement('h3');
-  burgersTitle.setAttribute('class', 'burgers-title');
+  burgersTitle.classList.add('burgers-title');
   burgersTitle.textContent = 'Burgers';
 
   const burgersList = document.createElement('ul');
-  burgersList.setAttribute('class', 'menu-items');
+  burgersList.classList.add('menu-items');
 
   const burgers = [
     {
@@ -52,11 +52,11 @@ export function renderMenu() {
   burgersList.innerHTML = burgersHTML;
 
   const shakesTitle = document.createElement('h3');
-  shakesTitle.setAttribute('class', 'shakes-title');
+  shakesTitle.classList.add('shakes-title');
   shakesTitle.textContent = 'Shakes';
 
   const shakesList = document.createElement('ul');
-  shakesList.setAttribute('class', 'menu-items');
+  shakesList.classList.add('menu-items');
 
   const shakes = [
     {

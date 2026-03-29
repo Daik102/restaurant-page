@@ -3,22 +3,22 @@ export function renderHome() {
   content.innerHTML = '';
 
   const title = document.createElement('h1');
-  title.setAttribute('class', 'title');
+  title.classList.add('title');
   title.textContent = 'Odin Burger';
 
   const establishedYear = document.createElement('p');
-  establishedYear.setAttribute('class', 'establishedYear');
+  establishedYear.classList.add('establishedYear');
   establishedYear.textContent = '- Est. 2025 -';
 
   const message = document.createElement('p');
-  message.setAttribute('class', 'message');
+  message.classList.add('message');
   message.textContent = 'Welcome to the best burger restaurant in the world!';
 
   const imgContainer = document.createElement('div');
-  imgContainer.setAttribute('class', 'img-container');
+  imgContainer.classList.add('img-container');
 
   const link = document.createElement('a');
-  link.setAttribute('class', 'link-for-photo');
+  link.classList.add('photo-link');
   link.setAttribute('target', '_blank');
   link.setAttribute('href', 'https://unsplash.com/photos/two-square-brown-wooden-dining-tables-near-brown-brick-wall-OkhcMbf3vQ0');
   link.textContent = 'Photo by Katlyn Giberson on Unsplash';
