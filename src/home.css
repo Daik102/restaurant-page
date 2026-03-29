@@ -27,19 +27,6 @@ body {
   background-color: var(--background-theme);
 }
 
-li {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-  font-size: 1.6rem;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -88,7 +75,7 @@ a:hover {
 }
 
 .title {
-  font-size: 6.4rem;
+  font-size: 6rem;
   font-weight: 700;
   color: var(--orangered-theme);
   text-shadow: 0.2rem 0.2rem 0.4rem var(--background-theme), 0.8rem 0.8rem 0.8rem var(--brown-theme-shadow);
@@ -104,25 +91,28 @@ a:hover {
 }
 
 .message {
+  width: 40rem;
   font-size: 3rem;
   text-align: center;
 }
 
 .img-container {
   margin: 2rem 0;
-  width: 64rem;
+  width: 40rem;
   aspect-ratio: 4 / 3;
   background: url(./images/katlyn-giberson-small.jpg) no-repeat;
   background-size: contain;
   box-shadow: 1.2rem 1.2rem 1.2rem var(--brown-theme-shadow);
 }
 
-.link-for-photo {
+.photo-link {
   padding: 0.2rem;
+  font-size: 1.6rem;
+  text-decoration: none;
   color: var(--brown-theme);
 }
 
-.link-for-photo:hover {
+.photo-link:hover {
   color: var(--orangered-theme);
 }
 
@@ -131,94 +121,150 @@ a:hover {
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 2rem 0;
+  padding: 2rem 0 4rem;
   background-color: var(--orangered-theme);
 }
 
-.admin-link {
+.portfolio-link {
   padding: 0.2rem;
+  font-size: 1.6rem;
+  text-decoration: none;
   color: var(--background-theme);
 }
 
-@media screen and (orientation: portrait) and (max-width: 30rem) {
+.portfolio-link:hover {
+  text-decoration: underline;
+}
+/* For smartphones in portrait mode */
+@media screen and (orientation: portrait) {
+  html {
+    font-size: 6.25px;
+  }
+}
+
+@media screen and (orientation: portrait) and (min-width: 22.5em) {
+  html {
+    font-size: 7.25px;
+  }
+}
+
+@media screen and (orientation: portrait) and (min-width: 23.4em) {
+  html {
+    font-size: 7.5px;
+  }
+}
+
+@media screen and (orientation: portrait) and (min-width: 24.3em) {
+  html {
+    font-size: 7.75px;
+  }
+}
+
+@media screen and (orientation: portrait) and (min-width: 25.75em) {
+  html {
+    font-size: 8.25px;
+  }
+}
+
+@media screen and (orientation: portrait) and (min-width: 26.75em) {
+  html {
+    font-size: 8.5px;
+  }
+}
+/* For small tablets in portrait mode */
+@media screen and (orientation: portrait) and (min-width: 48em) {
   .message,
   .img-container {
-    width: 40rem;
+    width: 60rem;
+  }
+
+  .img-container {
+    margin: 2.8rem 0 2rem;
   }
 
   .footer {
-    padding: 2rem 0 4rem;
+    padding: 2rem 0;
   }
 }
-
-@media screen and (orientation: portrait) and (max-width: 20rem) {
-  html {
-    font-size: 6px;
-  }
-}
-
-@media screen and (orientation: portrait) and (min-width: 20.01rem) and (max-width: 47.99rem) {
-  html {
-    font-size: 7px;
-  }
-}
-
-@media screen and (orientation: portrait) and (min-width: 24.01rem) and (max-width: 47.99rem) and (min-height: calc(50rem - 100px)) {
-  html {
-    font-size: 8px;
-  }
-}
-
-@media screen and (orientation: portrait) and (min-width: 24.01rem) and (max-width: 47.99rem) and (min-height: calc(54rem - 100px)) {
-  html {
-    font-size: 8.5px;
-  }
-}
-
-@media screen and (orientation: portrait) and (min-width: 48rem) {
-  html {
-    font-size: 8.5px;
-  }
-}
-
-@media screen and (orientation: portrait) and (min-width: 48rem) and (min-height: calc(70rem - 100px)) {
+/* For middle tablets in portrait mode */
+@media screen and (orientation: portrait) and (min-width: 50em) {
   html {
     font-size: 9px;
   }
 }
-
-@media screen and (orientation: portrait) and (min-width: 56rem) {
+/* For large tablets in portrait mode */
+@media screen and (orientation: portrait) and (min-width: 57em) {
   html {
     font-size: 10px;
   }
 }
-
-@media screen and (orientation: portrait) and (min-width: 64rem) {
+/* For smartphones in landscape mode */
+@media screen and (orientation: landscape) {
   html {
-    font-size: 11px;
+    font-size: 6.25px;
+  }
+
+  .footer {
+    padding: 2rem 0;
   }
 }
 
-@media screen and (orientation: landscape) and (max-width: 41rem) {
+@media screen and (orientation: landscape) and (min-width: 41.6em) {
   html {
-    font-size: 6px;
+    font-size: 7.25px;
   }
 }
 
-@media screen and (orientation: landscape) and (min-width: 41.01rem) and (max-width: 47rem) {
+@media screen and (orientation: landscape) and (min-width: 46.25em) {
   html {
-    font-size: 7px;
+    font-size: 7.5px;
   }
 }
 
-@media screen and (orientation: landscape) and (min-width: 47.01rem) and (max-width: 53rem) {
+@media screen and (orientation: landscape) and (min-width: 50em) {
+  html {
+    font-size: 7.75px;
+  }
+}
+
+@media screen and (orientation: landscape) and (min-width: 52.7em) {
   html {
     font-size: 8px;
   }
 }
 
-@media screen and (orientation: landscape) and (min-width: 53.01rem) and (max-width: 59rem) {
+@media screen and (orientation: landscape) and (min-width: 55.75em) {
+  html {
+    font-size: 8.25px;
+  }
+}
+
+@media screen and (orientation: landscape) and (min-width: 58em) {
   html {
     font-size: 8.5px;
+  }
+}
+/* For small tablets in landscape mode */
+@media screen and (orientation: landscape) and (min-width: 64em) {
+  .message,
+  .img-container {
+    width: 60rem;
+  }
+
+  .img-container {
+    margin: 2.8rem 0 2rem;
+  }
+}
+
+/* For middle tablets in landscape mode */
+@media screen and (orientation: landscape) and (min-width: 73.75rem) {
+  html {
+    font-size: 9px;
+  }
+}
+/* For large tablets in landscape mode, laptops, and desktops */
+@media screen and (orientation: landscape) and (min-width: 84rem) {
+  html {
+    font-size: 10px;
   }
 }

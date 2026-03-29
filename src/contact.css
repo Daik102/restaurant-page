@@ -9,17 +9,25 @@
 
 .staff-title,
 .contact-title {
-  margin: 2rem 0 1.6rem;
   font-weight: 700;
   font-size: 3.6rem;
   color: var(--orangered-theme);
 }
 
+.staff-title {
+  margin: 2rem 0;
+}
+
+.contact-title {
+  margin: 2rem 0 1.2rem;
+}
+
 .staff-members {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 3.2rem;
+  gap: 3.6rem;
   margin: 1.2rem 0 4.8rem;
+  list-style: none;
 }
 
 .staff-member {
@@ -79,17 +87,15 @@
   font-size: 2.4rem;
   font-family: Arial, Helvetica, sans-serif;
 }
-
-@media screen and (orientation: portrait) and (max-width: 30rem) {
+/* For smartphones in portrait mode */
+@media screen and (orientation: portrait) and (max-width: 47.99rem) {
   .quote {
     width: 40rem;
     text-align: center;
   }
-}
 
-@media screen and (orientation: portrait) and (max-width: 47.99rem) {
   .staff-members {
-    grid-template-columns: 1fr;
-    gap: 2.4rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.8rem 4rem;
   }
 }
