@@ -1,0 +1,109 @@
+@font-face {
+  font-family: Lobster;
+  src: url(./fonts/Lobster-Regular.woff2) format('woff2');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Lobster, Arial, Helvetica, sans-serif;
+}
+
+:root {
+  --background-theme: #ffedca;
+  --orangered-theme: #ff4000;
+  --brown-theme: #511600;
+  --brown-theme-shadow: rgba(81, 22, 0, 0.4);
+  --brown-theme-light-shadow: rgba(81, 22, 0, 0.25);
+  --gold-theme: #f8bd26;
+}
+
+html {
+  font-size: 50%;
+}
+
+body {
+  background-color: var(--background-theme);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+.header {
+  width: 100%;
+  padding: 0.4rem 0;
+  background-color: var(--orangered-theme);
+  box-shadow: 0 0.2rem var(--background-theme), 0 0.6rem var(--orangered-theme);
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.btn {
+  margin: 0.4rem 0;
+  padding: 1rem 2rem;
+  font-size: 2rem;
+  color: var(--brown-theme);
+  background-color: var(--background-theme);
+  box-shadow: inset 0 -0.6rem 0.6rem 0 var(--brown-theme-light-shadow);
+  border: none;
+  border-radius: 47.5%;
+  cursor: pointer;
+}
+
+.btn:hover {
+  color: var(--orangered-theme);
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2.8rem 2rem;
+  color: var(--brown-theme);
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 1.2rem 0;
+  background-color: var(--orangered-theme);
+}
+
+.portfolio-link {
+  padding: 0.2rem;
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: var(--background-theme);
+}
+
+.portfolio-link:hover {
+  text-decoration: underline;
+}
+
+/* Middle and Large smartphones, and Tablets */
+@media screen and (orientation: portrait) and (min-width: 24.25em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+/* Desktops */
+@media screen and (min-width: 85.375em) {
+  html {
+    font-size: 62.5%;
+  }
+}

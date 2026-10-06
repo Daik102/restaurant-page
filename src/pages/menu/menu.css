@@ -11,14 +11,14 @@
 
 .burgers-title,
 .shakes-title {
-  margin: 2rem 0 2.4rem;
+  margin: 2.8rem 0;
   font-size: 3.6rem;
 }
 
 .menu-items {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 4rem;
+  grid-template-columns: 1fr;
+  gap: 3.2rem;
   list-style: none;
 }
 
@@ -30,7 +30,7 @@
 }
 
 .menu-item img {
-  width: 24rem;
+  width: 20rem;
   aspect-ratio: 4 / 3;
   object-fit: cover;
   border-radius: 0.8rem;
@@ -43,22 +43,24 @@
 
 .menu-name {
   margin: 2rem 0 0.8rem;
-  font-size: 2.8rem;
+  font-size: 2.6rem;
   border-bottom: 0.2rem solid var(--gold-theme);
 }
 
 .price {
   font-size: 2.2rem;
 }
-/* For smartphones in portrait mode */
-@media screen and (orientation: portrait) and (max-width: 47.99rem) {
+
+/* Tablets and Desktops */
+@media screen and (min-width: 48em) {
   .burgers-title,
   .shakes-title {
-    margin: 3.2rem 0;
+    margin: 2rem 0 2.4rem;
+    font-size: 3.6rem;
   }
 
   .menu-items {
-    grid-template-columns: 1fr;
-    gap: 3.2rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
   }
 }

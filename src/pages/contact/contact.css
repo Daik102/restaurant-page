@@ -1,16 +1,19 @@
 .quote {
-  font-size: 4rem;
+  width: 100%;
+  max-width: 32rem;
+  text-align: center;
+  font-size: 3rem;
 }
 
 .author {
-  margin: 0.8rem 0 4rem;
-  font-size: 3.2rem;
+  margin: 0.8rem 0 3.2rem;
+  font-size: 3rem;
 }
 
 .staff-title,
 .contact-title {
   font-weight: 700;
-  font-size: 3.6rem;
+  font-size: 3.4rem;
   color: var(--orangered-theme);
 }
 
@@ -24,9 +27,9 @@
 
 .staff-members {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 3.6rem;
-  margin: 1.2rem 0 4.8rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.8rem 3.2rem;
+  margin: 1.2rem 0 6rem;
   list-style: none;
 }
 
@@ -38,7 +41,7 @@
 }
 
 .staff-member img {
-  width: 18rem;
+  width: 16rem;
   aspect-ratio: 4 / 3;
   object-fit: cover;
   border-radius: 50%;
@@ -47,12 +50,12 @@
 
 .staff-name {
   margin: 1.2rem 0 0.4rem;
-  font-size: 3.2rem;
+  font-size: 2.8rem;
   border-bottom: 0.2rem solid var(--gold-theme);
 }
 
 .staff-position {
-  font-size: 2.4rem;
+  font-size: 2.2rem;
 }
 
 .position-top {
@@ -73,7 +76,7 @@
 .email svg,
 .phone svg {
   width: 2.4rem;
-  height: 2.4rem;
+  aspect-ratio: 1;
   fill: var(--brown-theme);
 }
 
@@ -84,18 +87,23 @@
 .email-address,
 .phone-number {
   font-weight: 700;
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   font-family: Arial, Helvetica, sans-serif;
 }
-/* For smartphones in portrait mode */
-@media screen and (orientation: portrait) and (max-width: 47.99rem) {
+
+/* Tablets and Desktops */
+@media screen and (min-width: 48em) {
   .quote {
-    width: 40rem;
-    text-align: center;
+    max-width: initial;
+    font-size: 3.6rem;
   }
 
   .staff-members {
-    grid-template-columns: 1fr 1fr;
-    gap: 2.8rem 4rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3.6rem;
+  }
+
+  .staff-member img {
+    width: 17.2rem;
   }
 }

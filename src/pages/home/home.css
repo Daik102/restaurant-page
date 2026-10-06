@@ -1,0 +1,51 @@
+.title {
+  font-size: 6rem;
+  font-weight: 700;
+  color: var(--orangered-theme);
+  text-shadow: 0.2rem 0.2rem 0.4rem var(--background-theme), 0.8rem 0.8rem 0.8rem var(--brown-theme-shadow);
+}
+
+.establishedYear {
+  margin: 0.4rem 0 3.6rem;
+  font-size: 1.6rem;
+  font-style: italic;
+  font-weight: 700;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: var(--orangered-theme);
+}
+
+.message {
+  width: 100%;
+  max-width: 36rem;
+  font-size: 2.6rem;
+  text-align: center;
+}
+
+.img-container {
+  margin: 2rem 0;
+  width: 100%;
+  max-width: 60rem;
+  aspect-ratio: 4 / 3;
+  background: url(../../images/katlyn-giberson-small.jpg) no-repeat;
+  background-size: contain;
+  box-shadow: 1.2rem 1.2rem 1.2rem var(--brown-theme-shadow);
+}
+
+.photo-link {
+  padding: 0.2rem;
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: var(--brown-theme);
+}
+
+.photo-link:hover {
+  color: var(--orangered-theme);
+}
+
+/* Tablets and Desktops */
+@media screen and (min-width: 48em) {
+  .message {
+    max-width: 60rem;
+    font-size: 2.8rem;
+  }
+}
