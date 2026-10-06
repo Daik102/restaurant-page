@@ -1,24 +1,21 @@
-import './home.css';
-import './menu.css';
-import './contact.css';
-import { renderHome } from './home';
-import { renderMenu } from './menu';
-import { renderContact } from './contact';
+import './global.css';
+import './pages/home/home.css';
+import './pages/menu/menu.css';
+import './pages/contact/contact.css';
+import { renderHome } from './pages/home/home';
+import { renderMenu } from './pages/menu/menu';
+import { renderContact } from './pages/contact/contact';
 
 renderHome();
 
 (function switchPage() {
-  const btns = document.querySelectorAll('.btn');
+  document.querySelector('nav').addEventListener('click', (e) => {
+    const btn = e.target.closest('.btn');
+    
+    if (!btn) return;
 
-  btns.forEach((btn) => {
-    btn.addEventListener('click', (e) => {
-      if (e.target.classList.contains('home')) {
-        renderHome();
-      } else if (e.target.classList.contains('menu')) {
-        renderMenu();
-      } else if (e.target.classList.contains('contact')) {
-        renderContact();
-      }
-    });
+    if (btn.classList.contains('home')) renderHome();
+    if (btn.classList.contains('menu')) renderMenu();
+    if (btn.classList.contains('contact')) renderContact();
   });
 })();
