@@ -7,7 +7,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Lobster, Arial, Helvetica, sans-serif;
 }
 
 :root {
@@ -21,6 +20,11 @@
 
 html {
   font-size: 50%;
+  font-family: Lobster, Arial, Helvetica, sans-serif;
+}
+
+button {
+  font-family: inherit;
 }
 
 body {
@@ -33,6 +37,7 @@ body {
   align-items: center;
   justify-content: space-between;
   min-height: 100vh;
+  min-height: 100svh;
 }
 
 .header {
